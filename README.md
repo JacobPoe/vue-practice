@@ -1,3 +1,11 @@
+# Source
+I built this ts app by loosely following the tutorial at:
+https://www.youtube.com/watch?v=JLc-hWsPTUY&ab_channel=TylerPotts
+
+Potts' tutorial was for an app built with JavaScript, while mine is
+built in TypeScript, so I had to interpret and learn the differences
+on the fly.
+
 # vue-practice
 
 This template should help get you started developing with Vue 3 in Vite.
