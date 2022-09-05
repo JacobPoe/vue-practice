@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const weatherClient = axios.create({
-    baseURL: 'http://localhost:9091/'
+    baseURL: '/api'
 });
 
 export async function getWeatherData(lat: string, lon: string) {

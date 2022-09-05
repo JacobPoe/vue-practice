@@ -13,6 +13,14 @@ export default defineConfig({
     },
   },
   server: {
-    port:9000
+    port:9000,
+    strictPort: true,
+    proxy: {
+      "/api": {
+        target: "http://localhost:9091/",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
   }
 });
