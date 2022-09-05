@@ -1,8 +1,7 @@
 <script setup lang="ts">
-
-defineProps<{
-  api: string;
-}>();
+  defineProps<{
+    api: string;
+  }>();
 </script>
 
 <template>
