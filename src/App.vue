@@ -6,19 +6,8 @@ import { getApiKey, getWeatherData } from "@/components/api/weather.api";
 import Weather from "./components/Weather.vue";
 
 export default defineComponent({
-    async created() {
-        // const [error , response] = window.navigator.geolocation.getCurrentPosition(locationSuccess, console.error);
-        var response = window.navigator.geolocation.getCurrentPosition(locationSuccess, console.error);
-        console.log(response);
-    },
     components: { Weather }
 });
-
-async function locationSuccess(pos: any) {
-  var coords = pos.coords;
-
-  return await getWeatherData(coords.latitude, coords.longitude);
-}
 
 </script>
 
