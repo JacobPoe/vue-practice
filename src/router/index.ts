@@ -1,17 +1,24 @@
+import ForecastVue from "@/components/Forecast.vue";
+import History from "@/components/History.vue";
+
 import { createRouter, createWebHistory } from "vue-router";
-import Weather from "../components/Weather.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      redirect: "/weather"
+      redirect: "/forecast"
     },
     {
-      path: "/weather",
-      name: "weather",
-      component: Weather
+      path: "/forecast",
+      name: "forecast",
+      component: ForecastVue
+    },
+    {
+      path: "/history",
+      name: "history",
+      component: History
     }
   ],
 });
