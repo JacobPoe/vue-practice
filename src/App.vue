@@ -1,7 +1,8 @@
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
 import { RouterLink, RouterView } from "vue-router";
-import { getWeatherData } from "./components/api/weather.api";
+import { getApiKey, getWeatherData } from "@/components/api/weather.api";
+
 import Weather from "./components/Weather.vue";
 
 export default defineComponent({
@@ -18,6 +19,7 @@ async function locationSuccess(pos: any) {
 
   return await getWeatherData(coords.latitude, coords.longitude);
 }
+
 </script>
 
 <template>

@@ -4,12 +4,19 @@ const weatherClient = axios.create({
     baseURL: '/api'
 });
 
-export async function getWeatherData(lat: string, lon: string) {
+export async function getWeatherData() {
     try {
-        var requestURL = "/weather" + "?lat=" + lat + "&lon=" + lon;
+        var latitude, longitude;
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                latitude = position.coords.latitude;
+                longitude = position.coords.longitude;
+            }
+        )
+
+        var requestURL = "/weather" + "?lat=" + latitude + "&lon=" + longitude;
 
         const {data} = await weatherClient.get(requestURL);
-        console.log(data);
         return [null, data];
     } catch (error) {
         return [error];
