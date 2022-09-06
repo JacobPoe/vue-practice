@@ -26,7 +26,7 @@ export default defineComponent({
     <div class="wrapper">
       <nav>
         <RouterLink to="/forecast">Forecast</RouterLink>
-        <RouterLink to="/history">History</RouterLink>
+        <RouterLink to="/stats">Statistical Data</RouterLink>
       </nav>
     </div>
   </header>

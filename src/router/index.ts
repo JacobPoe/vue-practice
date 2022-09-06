@@ -1,5 +1,5 @@
 import ForecastVue from "@/components/Forecast.vue";
-import History from "@/components/History.vue";
+import Stats from "@/components/Stats.vue";
 
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -16,9 +16,9 @@ const router = createRouter({
       component: ForecastVue
     },
     {
-      path: "/history",
-      name: "history",
-      component: History
+      path: "/stats",
+      name: "stats",
+      component: Stats
     }
   ],
 });
